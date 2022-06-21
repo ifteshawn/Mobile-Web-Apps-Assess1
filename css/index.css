@@ -1,0 +1,221 @@
+@media only screen and (max-width: 480px) {
+  #menuPanel {
+    width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .ui-content {
+    width: 900px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+  }
+}
+
+
+body {
+  font-family: "Lato" sans-serif;
+  padding: 0 px;
+  margin: 0 px;
+  text-align: center;
+}
+
+/* Removes white background from body */
+.content {
+  background: none;
+}
+
+/* About me logo on header styling  */
+.aboutMeLink {
+  padding: 0.08em;
+}
+
+/* Background image for homepage and form data */
+#home,
+#formData {
+  background-image: url("../images/code.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* to display error messages in red while validating inputs */
+form .error {
+  color: #ff0000;
+}
+
+
+/* removes text decor from header home page link */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* menu */
+#menuPanel img {
+  width: 40%;
+  display: block;
+  margin: 3em auto;
+}
+
+#menuPanel {
+  opacity: 0.8;
+}
+
+/* Menupanel pic  */
+.myLogo {
+  vertical-align: middle;
+  height: 28px;
+}
+
+/* API images styling */
+.APIimage {
+  width: 100%;
+  height: auto;
+}
+
+/* START of Carousel - student choice*/
+#imgCarousel .content {
+  color: #fff;
+  background: #333;
+}
+
+.carouselContainer {
+  width: 100%;
+  overflow: auto;
+}
+
+.slider-inner {
+  width: 95%;
+  height: auto;
+  aspect-ratio: 5/3;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  padding: 3px;
+  border: #666 solid 1px;
+}
+
+.slider-inner img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.slider-inner img.active {
+  display: inline-block;
+}
+
+.prev,
+.next {
+  width: 5.5%;
+  float: left;
+  margin-top: 25%;
+  cursor: pointer;
+}
+
+/* prev arrow button */
+.prev {
+  position: relative;
+  margin-right: -5%;
+  z-index: 100;
+}
+
+/* next arrow button */
+.next {
+  position: relative;
+  margin-left: -5%;
+  z-index: 100;
+}
+
+
+/*END of Carousel - student choice*/
+
+/*Start of About me page */
+
+/* div that holds the hidden info text about me to be displayed with hover or touch */
+.hidden-text {
+  height: 100%;
+  width: auto;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+}
+
+
+#aboutMeInfo {
+  margin-top: 5%;
+  font-size: clamp(8px, 2.5vw, 28px);
+}
+
+.containerAboutMe {
+  width: 50%;
+  border-radius: 5px 5px 5px 5px;
+  justify-content: center;
+}
+
+.demo {
+  display: flex;
+  justify-content: center;
+  transform: translate(50%);
+}
+
+/* Make the image to responsive */
+.containerAboutMe img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 5px 5px;
+}
+
+/* Add some padding inside the container */
+.container1 {
+  padding: 2px 16px;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  height: 84%;
+  width: auto;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  padding: 20px;
+  vertical-align: middle;
+  border-radius: 5px 5px 0 0;
+}
+
+.demo:hover #myPic {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.25);
+  filter: blur(2.5px);
+  transition: 0.5s all;
+}
+
+/* When mouse over the container, fade in the overlay title */
+.demo:hover .overlay {
+  transform: scale(1.25);
+  opacity: 1;
+}
+
+/* Class to be added on touch to the about me text */
+.overlayHover {
+  position: absolute;
+  height: 84%;
+  width: auto;
+  transition: 0.5s ease;
+  transform: scale(1.25);
+  opacity: 1;
+  color: white;
+  font-size: 1em;
+  padding: 20px;
+  vertical-align: middle;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Class to be added on touch to the about me text */
+.imgHover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.25);
+  filter: blur(2.5px);
+  transition: 0.5s all;
+}

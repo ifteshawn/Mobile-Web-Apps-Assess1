@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>COIT20269 - Assessment 1</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jqm.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jqm.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <!-- Start SPA page HOME ----------------------->
+    <div data-role="page" id="home">
+        <!-- Header Section  -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+        <!-- content Section -->
+        <div data-role="content" data-theme="a" class="content">
+            <h1>Welcome</h1>
+        </div>
+        <!-- Footer section  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+
+    <!--  END SPA PAGE HOME --------------------------------------------- -->
+
+
+    <!--  START SPA PAGE ABOUT ME --------------------------------------------- -->
+    <div data-role="page" id="aboutMe">
+        <!-- Header  -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+        <!-- Content   -->
+        <div data-role="content" data-theme="a" class="content">
+            <h1>Me</h1>
+            <div class="containerAboutMe">
+                <div class="demo">
+                    <img src="images/aboutMePic.jpeg" id="myPic">
+                    <div id="textOverlay" class="overlay">
+                        <div class="hidden-text">
+                            <p id="aboutMeInfo">
+                                Hi There! I am Iftekhar Alam, a Software Developer. I am currently enrolled into Masters of
+                                Information
+                                Technology. I also have an undergraduate degree in Economics & Finance. This assignment
+                                is
+                                for
+                                Mobile Web Application unit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container1">
+                <h4><b>Iftekhar Alam</b></h4>
+            </div>
+
+        </div>
+
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+    <!--  END SPA PAGE ABOUT ME --------------------------------------------- -->
+
+
+    <!--  START SPA PAGE FORM --------------------------------------------- -->
+    <div data-role="page" id="form">
+        <!-- Header Section  -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+
+        <!-- Content Section  -->
+        <div data-role="content" data-theme="a" class="content">
+            <h1>Census 2020</h1>
+
+            <div class="container">
+                <form action="javascript:processForm(this)" name="censusForm" id="censusForm">
+                    <label for="fName" class="ui-hidden-accessible">First Name:</label>
+                    <input type="text" name="fName" id="fName" placeholder="*First Name" />
+                    <label for="lName" class="ui-hidden-accessible">Last Name:</label>
+                    <input type="text" name="lName" id="lName" placeholder="*Last Name" />
+                    <label for="state" class="ui-hidden-accessible">State:</label>
+                    <select name="state" id="state">
+                        <option value="" disabled selected>* Choose a State</option>
+                        <option value="nsw">NSW</option>
+                        <option value="vic">VIC</option>
+                        <option value="qld">QLD</option>
+                        <option value="sa">SA</option>
+                        <option value="wa">WA</option>
+                        <option value="act">ACT</option>
+                    </select>
+                    <label for="email" class="ui-hidden-accessible">Email ID:</label>
+                    <input type="text" name="email" id="email" placeholder="*fName@lastname.com" />
+                    <label for="age" class="ui-hidden-accessible">Age:</label>
+                    <input name="age" id="age" placeholder="* age > 14 < 120 |  Number only" />
+                    <button type="submit">Submit</button>
+                    <button type="button" id="clearForm">Clear</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Section  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+    <!--  END SPA PAGE FORM  --------------------------------------------- -->
+
+
+
+    <!--  START SPA PAGE FORM DATA --------------------------------------------- -->
+
+    <div data-role="page" id="formData">
+        <!-- Header Section  -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+
+        <!-- Content Section  -->
+        <div data-role="content" data-theme="a" class="content">
+            <h1>Census Data</h1>
+            <table data-role="table" id="dataTable" data-mode="columntoggle" class="ui-responsive table-stroke"
+                data-column-btn-text="Columns">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>State</th>
+                        <th data-priority="2">Email</th>
+                        <th data-priority="1">Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- This is where form data will be displayed dynamically  -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Footer Section  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+
+    <!--  END SPA PAGE FORM DATA --------------------------------------------- -->
+
+
+    <!--  START SPA PAGE API DATA --------------------------------------------- -->
+    <!-- Header Section  -->
+    <div data-role="page" id="apiData">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+        <!-- Content Section  -->
+        <div data-role="content" data-theme="a" class="content">
+            <h1>Breaking Bad Characters</h1>
+            <div id="container2">
+                <div class="charactersDiv">
+                    <!-- API data to be displayed dynamically  -->
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+    <!--  END SPA PAGE API DATA --------------------------------------------- -->
+
+
+    <!--  START SPA PAGE IMAGE CAROUSEL --------------------------------------------- -->
+
+    <div data-role="page" id="imgCarousel">
+        <!-- Header Section  -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" class="menu ui-btn ui-icon-bars ui-btn-icon-notext" id="homeButton">Menu </a>
+            <h1><a href="#home">COIT20269 - Assessment 1</a></h1>
+            <a href="#aboutMe" class="aboutMeLink ui-btn"> <img src="images/logo.png" class="myLogo"></a>
+        </div>
+        <!-- Content Section  -->
+        <div data-role="content" data-theme="a" class="content">
+            <div class="carouselContainer">
+                <h1>Image Carousel</h1>
+                <div class="slider-outer">
+                    <img src="images/carousel/Previous pointer.jpg" class="prev">
+                    <div class="slider-inner">
+                        <img src="images/carousel/img1.jpg" class="active" id="first">
+                        <img src="images/carousel/img2.jpg">
+                        <img src="images/carousel/img3.jpg"> 
+                        <img src="images/carousel/img4.jpg">
+                        <img src="images/carousel/img5.jpg" id="last">
+                    </div>
+                    <img src="images/carousel/Next pointer.png" class="next">
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section  -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>Iftekhar Alam &copy; 2022</h1>
+        </div>
+
+    </div>
+
+
+    <!--  END SPA PAGE IMAGE CAROUSEL --------------------------------------------- -->
+
+
+    <!--Menu Panel-->
+    <div data-role="panel" id="menuPanel" data-position-fixed="true" data-position="left" data-theme="b"
+        data-display="overlay">
+
+        <div class="panel-content">
+            <a id="homeLink"><img src="images/IA.png" id="IA"></a>
+
+            <ul data-role="listview" id="menuListview">
+                <li data-icon="grid"> <a id="aboutLink">About Me </a></li>
+                <li data-icon="grid"> <a id="formLink">Form </a></li>
+                <li data-icon="grid"> <a id="formDataLink">Form Data </a></li>
+                <li data-icon="grid"> <a id="apiDataLink">API Data </a></li>
+                <li data-icon="grid"> <a id="imageCarouselLink">Image Carousel </a></li>
+                <li data-icon="grid"> <a id="clearAll">Clear All Data </a></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- Menu Panel  -->
+
+</body>
+
+</html>
